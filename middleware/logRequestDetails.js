@@ -1,11 +1,11 @@
 class log {
-    logRequestDetails(req, res) {
+    logRequestDetails(req, res, next) {
         const method = req.method;
-        const url = req.originalUrl;
+        const url = req.originalUrl || req.url;
 
-        console.log(`[${method}] ${url}`);
+        console.log(`Request Method: ${method}, URL: ${url}`);
+        next();
     }
 }
-
 
 module.exports = new log;
