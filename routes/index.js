@@ -1,11 +1,7 @@
-const mssvRouter = require('./mssv');
-const messageRouter = require('./message');
-const studentRouter = require('./student');
+const postRoute = require('./post');
 
 function route(app) {
-    app.use('/MSSV', mssvRouter);
-    app.use('/message', messageRouter);
-    app.use('/', studentRouter);
+    app.use('/', postRoute);
 }
 
 module.exports = route;
