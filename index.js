@@ -8,13 +8,14 @@ const app = express();
 const port = 5000;
 const hostname = '127.0.0.1';
 
+app.use(logger);
+
 //connect css
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.urlencoded({
     extends: true
 }));
 app.use(express.json());
-app.use(logger);
 
 //template engine
 app.engine('hbs', handlebars.engine({

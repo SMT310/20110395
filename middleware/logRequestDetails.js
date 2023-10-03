@@ -8,4 +8,4 @@ class log {
     }
 }
 
-module.exports = new log;
+module.exports = log;
