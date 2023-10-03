@@ -2,6 +2,7 @@ const express = require('express');
 const handlebars = require('express-handlebars');
 const path = require('path');
 const route = require('./routes');
+const logger = require('./middleware/logRequestDetails');
 
 const app = express();
 const port = 5000;
@@ -13,6 +14,7 @@ app.use(express.urlencoded({
     extends: true
 }));
 app.use(express.json());
+app.use(logger);
 
 //template engine
 app.engine('hbs', handlebars.engine({
