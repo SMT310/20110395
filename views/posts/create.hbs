@@ -2,7 +2,7 @@
         <div class="mb">
             <a href="/" class="back-to-home">
                 <i class="fa-solid fa-chevron-left"></i>
-                Back
+                Return
             </a>
         </div>
         <div class="mb">
@@ -39,12 +39,9 @@
             event.preventDefault();
             warningMessage.textContent = 'Vui lòng nhập đầy đủ thông tin.';
         } else {
-            // Đã nhập đầy đủ, tiến hành submit form
-            // ...
             warningMessage.textContent = '';
-            // Initialize CKEditor
             CKEDITOR.replace('content', {
-                // Configuration options if needed
+
             });
         }
     });

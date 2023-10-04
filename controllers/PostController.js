@@ -21,7 +21,7 @@ class PostController {
         res.redirect('/');
     }
 
-    //[POST] post/postViewDetail
+    //[GET] post/:id/postViewDetail
     viewDetailPost(req, res, next) {
         const item = posts.find((item) => item.id === req.params.id);
         res.render('posts/detail', {
@@ -29,6 +29,7 @@ class PostController {
         });
     }
 
+    //[POST] post/:id/postComment
     addComment(req, res, next) {
         const comment = req.body.comment;
         const currentDate = new Date();
@@ -38,6 +39,43 @@ class PostController {
         res.redirect('back');
     }
 
+    //[GET] post/:id/postEdit
+    editPost(req, res, next) {
+        const item = posts.find((item) => item.id === req.params.id);
+        res.render('posts/edit', {
+            data: item
+        })
+    }
+
+    //[PUT] post/:id
+    updatePost(req, res, next) {
+        let pos;
+        const data = req.body;
+        const post = posts.find((item, index) => {
+            if (item.id === req.body.id) {
+                pos = index;
+                return item;
+            }
+        });
+        if (post) {
+            posts[pos].title = data.title;
+            posts[pos].description = data.description;
+            posts[pos].content = data.content;
+        }
+        res.redirect('/');
+    }
+
+    deletePost(req, res, next) {
+        const postId = req.params.id;
+        const postIndex = posts.findIndex(post => post.id === postId);
+
+        if (postIndex !== -1) {
+            posts.splice(postIndex, 1);
+            res.redirect('/');
+        } else {
+            res.redirect('back');
+        }
+    }
 }
 
 module.exports = new PostController;

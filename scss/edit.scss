@@ -1,0 +1,36 @@
+.container-edit {
+    margin: 24px;
+}
+.back-to-home {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 4px 12px;
+}
+
+.back-to-home:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.m-left-12 {
+    margin-left: 48px;
+}
+.m-left-48 {
+    margin-top: 12px;
+    margin-left: 48px;
+}
+.btn-post {
+    padding: 8px 26px;
+    opacity: 1;
+    border: 2px solid #333;
+    border-radius: 12px;
+    background-color:aqua;
+}
+.btn-post:hover {
+    color: firebrick;
+    opacity: 0.8;
+    font-weight: 800;
+}
+::selection {
+    background-color: blue;
+    color: white;
+}

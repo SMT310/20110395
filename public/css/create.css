@@ -7,6 +7,17 @@
   margin-bottom: 24px;
 }
 
+.back-to-home {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 4px 12px;
+}
+
+.back-to-home:hover {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
 .btn-primary {
   padding: 8px 24px;
   border-radius: 12px;

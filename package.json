@@ -3,7 +3,9 @@
     "start": "nodemon --inspect index.js",
     "watchapp": "sass --watch scss/app.scss public/css/app.css",
     "watchcreate": "sass --watch scss/create.scss public/css/create.css",
-    "watchdetail": "sass --watch scss/detail.scss public/css/detail.css"
+    "watchdetail": "sass --watch scss/detail.scss public/css/detail.css",
+    "watchedit": "sass --watch scss/edit.scss public/css/edit.css"
+
 
   },
   "dependencies": {
