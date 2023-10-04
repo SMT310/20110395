@@ -1,0 +1,21 @@
+#createContainer {
+  margin: 24px;
+  font-size: 24px;
+}
+
+.mb {
+  margin-bottom: 24px;
+}
+
+.btn-primary {
+  padding: 8px 24px;
+  border-radius: 12px;
+}
+
+.btn-primary:hover {
+  background-color: greenyellow;
+  color: black;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=create.css.map */

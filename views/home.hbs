@@ -1,1 +1,22 @@
-<h1>HOME PAGE</h1>
+<div class="mt-4">
+    {{#if data.length}}
+        <div class="row">
+        {{#each data}}
+            <div class="col-sm-12">
+                <div class="card card-course-item">
+                    <div class="card-body">
+                        <h3 class="card-title">Title: {{this.title}}</h3>
+                        <p class="card-text">Description: {{ this.description }}</p>
+                        <a href="/post/{{ this.id }}/postViewDetail" class="btn btn-primary">View details</a>
+                        <a href="/post/{{ this.id }}/edit" class="btn btn-info">Edit Post</a>
+                        <a href="" class="btn btn-danger" data-toggle="modal" data-id="{{ this.id }}"
+                            data-target="#delete-modal">Delete Post</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+        </div>
+    {{else }}
+        <h1>Hiện tại không có bài đăng nào!</h1>
+    {{/if }}
+</div>

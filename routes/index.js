@@ -1,7 +1,9 @@
 const postRoute = require('./post');
+const homeRoute = require('./home');
 
 function route(app) {
-    app.use('/', postRoute);
+    app.use('/post', postRoute);
+    app.use('/', homeRoute);
 }
 
 module.exports = route;

@@ -3,12 +3,15 @@ const handlebars = require('express-handlebars');
 const path = require('path');
 const route = require('./routes');
 const logger = require('./middleware/logRequestDetails');
+const methodOverride = require('method-override');
 
 const app = express();
 const port = 5000;
 const hostname = '127.0.0.1';
 
 app.use(logger);
+app.use(methodOverride('_method'));
+
 
 //connect css
 app.use(express.static(path.join(__dirname, '/public')));
